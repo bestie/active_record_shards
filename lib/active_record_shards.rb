@@ -94,6 +94,8 @@ when '6.0'
 
   # https://github.com/rails/rails/blob/v6.0.4/activerecord/lib/active_record/associations/association.rb#L213
   ActiveRecord::Associations::Association.prepend(ActiveRecordShards::DefaultReplicaPatches::AssociationsAssociationFindTargetPatch)
+when '6.1'
+  :some_patches_probably_missing
 else
   raise "ActiveRecordShards is not compatible with #{ActiveRecord::VERSION::STRING}"
 end

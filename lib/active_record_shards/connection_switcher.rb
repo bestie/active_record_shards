@@ -216,6 +216,8 @@ when '5.0'
   require 'active_record_shards/connection_switcher-5-0'
 when '5.1', '5.2', '6.0'
   require 'active_record_shards/connection_switcher-5-1'
+when '6.1'
+  :some_patches_probably_missing
 else
   raise "ActiveRecordShards is not compatible with #{ActiveRecord::VERSION::STRING}"
 end
