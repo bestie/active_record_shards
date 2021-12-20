@@ -20,6 +20,8 @@ require 'pry-byebug'
 
 RAILS_ENV = "test"
 
+puts "LEGACY_CONNECTION_HANDLING? " + ENV.fetch("LEGACY_CONNECTION_HANDLING").inspect
+
 ActiveRecord::Base.logger = Logger.new(__dir__ + "/test.log")
 ActiveSupport.test_order = :sorted
 ActiveSupport::Deprecation.behavior = :raise
